@@ -1,0 +1,42 @@
+from openai import OpenAI
+import os
+
+print('os本地环境',os.getenv('DASHSCOPE_API_KEY'))
+
+client = OpenAI(
+    # 如果没有配置环境变量，请用阿里云百炼API Key替换：api_key="sk-xxx"
+    api_key=os.getenv("DASHSCOPE_API_KEY"),
+    # api_key='sk-fd353d5',
+    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+)
+
+messages = [
+    {"role":'system',"content":'你是ai助理，回答很简洁'},
+    {"role":'user',"content":'小明有2条狗'},
+    {"role":'assistant',"content":'好的'},
+    {"role":'user',"content":'小红有3条猫'},
+    {"role":'assistant',"content":'好的'},
+    {"role": "user", "content": "总共有几个动物呢？"}
+]
+
+completion = client.chat.completions.create(
+    model="qwen3-max",  # 您可以按需更换为其它深度思考模型
+    messages=messages,
+    # extra_body={"enable_thinking": False},
+    stream=True
+)
+
+is_answering = False  # 是否进入回复阶段
+print("\n" + "=" * 20 + "思考过程" + "=" * 20)
+for chunk in completion:
+    print('chunk所有的返回数据',chunk)
+    delta = chunk.choices[0].delta
+    # if hasattr(delta, "reasoning_content") and delta.reasoning_content is not None:
+    #     if not is_answering:
+    #         print(delta.reasoning_content, end="", flush=True)
+    # if hasattr(delta, "content") and delta.content:
+    #     if not is_answering:
+    #         print("\n" + "=" * 20 + "完整回复" + "=" * 20)
+    #         is_answering = True
+    print(delta.content, end="", flush=True)
+        # flush=true 立刻刷新缓冲区，使打印像流水一样输出
