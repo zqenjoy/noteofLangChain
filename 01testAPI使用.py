@@ -10,7 +10,7 @@ client = OpenAI(
     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
 )
 
-messages = [{"role": "user", "content": "你能做些什么呢？"}]
+messages = [{"role": "user", "content": "python的3D工具有哪些？"}]
 
 completion = client.chat.completions.create(
     model="qwen3.5-plus",  # 您可以按需更换为其它深度思考模型
@@ -32,4 +32,6 @@ for chunk in completion:
             is_answering = True
         print(delta.content, end="", flush=True)
         # flush=true 立刻刷新缓冲区，使打印像流水一样输出
+
+
 
