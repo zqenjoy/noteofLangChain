@@ -7,13 +7,13 @@ client = OpenAI(
 #     # 如果没有配置环境变量，请用阿里云百炼API Key替换：api_key="sk-xxx"
 #     api_key=os.getenv("DASHSCOPE_API_KEY"),
 #     # api_key='sk-fd353d5',
-    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+    base_url="http://localhost:11434/v1",
 )
 
-messages = [{"role": "user", "content": "python的3D工具有哪些？"}]
+messages = [{"role": "user", "content": "你是什么模型呢？"}]
 
 completion = client.chat.completions.create(
-    model="qwen3:8b",  # 您可以按需更换为其它深度思考模型
+    model="qwen3:4b",  # 您可以按需更换为其它深度思考模型
     messages=messages,
     # extra_body={"enable_thinking": True},
     stream=True

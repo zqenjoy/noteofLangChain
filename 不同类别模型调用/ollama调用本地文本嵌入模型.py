@@ -1,8 +1,6 @@
-
-
 from langchain_community.embeddings import DashScopeEmbeddings
 
-# DashScopeEmbeddings中不穿模式用的是text-embedding-v1模型
+# DashScopeEmbeddings中不传模式用的是text-embedding-v1模型
 # model = DashScopeEmbeddings()
 
 # print(model.embed_query('我喜欢你'))
