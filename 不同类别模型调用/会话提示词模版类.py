@@ -4,7 +4,7 @@ from langchain_community.chat_models.tongyi import ChatTongyi
 from langchain_core.runnables.base import RunnableSerializable
 
 
-# 普通的PromptTemplate 通过from_message只能传入一条模板消息
+# 普通的PromptTemplate 通过from_template只能传入一条模板消息
 # ChatPromptTemplate 通过from_message方法,从列表list中获取多轮次会话作为聊天的基础模板
 
 # MessagesPlaceholder作为占位符 不是静态固定消息，它能随着对话的进行不停地积攒，动态的

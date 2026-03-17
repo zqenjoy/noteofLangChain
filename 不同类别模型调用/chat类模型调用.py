@@ -14,7 +14,7 @@ chat = ChatTongyi(model="qwen3-max")
 # 注意这个使用的是chunk.content获取内容
 
 
-# messages = [
+#   = [
 # SystemMessage(content="你是一位来自边塞的诗人"), #系统设定
 # HumanMessage(content="给我写一首唐诗"), #提问prompt
 # AIMessage(content="鹅鹅鹅,曲项向天歌,白毛浮绿水,红掌拨清波"),
