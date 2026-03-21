@@ -10,6 +10,6 @@ new_chain=    RunnableWithMessageHistory(
         None,           # 获取指定会话ID的历史会话函数
         input_message="input",  #明湖输入消息在模板中的占位符
         history_message="chat_history"  # 声明历史消息在模板中的占位符
-
+)
 ```
 
