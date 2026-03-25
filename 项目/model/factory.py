@@ -1,10 +1,12 @@
+
+
 from abc import ABC, abstractmethod
 from typing import Optional
 from langchain_core.embeddings import Embeddings
-from langchain_community.chat_models.tonyyi import BaseChatModel
+from langchain_community.chat_models.tongyi import BaseChatModel
 from langchain_community.embeddings import DashScopeEmbeddings
 from langchain_community.chat_models.tongyi import ChatTongyi
-from config_handler import rag_config
+from utils.config_handler import rag_config
 
 
 class BaseModelFactory(ABC):
@@ -25,3 +27,5 @@ class EmbeddingModelFactory(BaseModelFactory):
 
 chat_model  = ChatModelFactory().generator()
 embed_model = EmbeddingModelFactory().generator()
+if __name__ == '__main__':
+    print(rag_config["chat_model_name"])
