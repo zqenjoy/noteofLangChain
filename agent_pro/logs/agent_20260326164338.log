@@ -1,0 +1,36 @@
+2026-03-26 16:43:39,146 - agent - ERROR - vector_store.py:91 - [加载知识库]D:\ai_agent_develop\agent_pro\data\扫地机器人100问.pdf加载失败
+Traceback (most recent call last):
+  File "D:\ai_agent_develop\agent_pro\rag\vector_store.py", line 79, in load_document
+    split_document:list[Document] =  self.spliter_documents(documents)
+                                     ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'VextorStoreService' object has no attribute 'spliter_documents'
+2026-03-26 16:43:39,148 - agent - ERROR - vector_store.py:91 - [加载知识库]D:\ai_agent_develop\agent_pro\data\扫地机器人100问2.txt加载失败
+Traceback (most recent call last):
+  File "D:\ai_agent_develop\agent_pro\rag\vector_store.py", line 79, in load_document
+    split_document:list[Document] =  self.spliter_documents(documents)
+                                     ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'VextorStoreService' object has no attribute 'spliter_documents'
+2026-03-26 16:43:39,152 - agent - ERROR - vector_store.py:91 - [加载知识库]D:\ai_agent_develop\agent_pro\data\扫拖一体机器人100问.txt加载失败
+Traceback (most recent call last):
+  File "D:\ai_agent_develop\agent_pro\rag\vector_store.py", line 79, in load_document
+    split_document:list[Document] =  self.spliter_documents(documents)
+                                     ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'VextorStoreService' object has no attribute 'spliter_documents'
+2026-03-26 16:43:39,154 - agent - ERROR - vector_store.py:91 - [加载知识库]D:\ai_agent_develop\agent_pro\data\故障排除.txt加载失败
+Traceback (most recent call last):
+  File "D:\ai_agent_develop\agent_pro\rag\vector_store.py", line 79, in load_document
+    split_document:list[Document] =  self.spliter_documents(documents)
+                                     ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'VextorStoreService' object has no attribute 'spliter_documents'
+2026-03-26 16:43:39,155 - agent - ERROR - vector_store.py:91 - [加载知识库]D:\ai_agent_develop\agent_pro\data\维护保养.txt加载失败
+Traceback (most recent call last):
+  File "D:\ai_agent_develop\agent_pro\rag\vector_store.py", line 79, in load_document
+    split_document:list[Document] =  self.spliter_documents(documents)
+                                     ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'VextorStoreService' object has no attribute 'spliter_documents'
+2026-03-26 16:43:39,157 - agent - ERROR - vector_store.py:91 - [加载知识库]D:\ai_agent_develop\agent_pro\data\选购指南.txt加载失败
+Traceback (most recent call last):
+  File "D:\ai_agent_develop\agent_pro\rag\vector_store.py", line 79, in load_document
+    split_document:list[Document] =  self.spliter_documents(documents)
+                                     ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'VextorStoreService' object has no attribute 'spliter_documents'
