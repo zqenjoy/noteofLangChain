@@ -21,7 +21,7 @@ class VextorStoreService:
         self.spliter = RecursiveCharacterTextSplitter(
             chunk_size = chroma_config["chunk_size"],
             chunk_overlap = chroma_config["chunk_overlap"],
-            chunk_separators = chroma_config["separators"],
+            separators = chroma_config["separators"],
             length_function = len
         )
 
@@ -37,7 +37,7 @@ class VextorStoreService:
         def check_md5_hex(md5_for_check:str):
             if not os.path.exists(get_abs_path(chroma_config["md5_hex_store"])):
                 # 如果不存在，则创建这个文件
-                open(get_abs_path(chroma_config["md5_hex_store"]),'w',encodings='utf-8').close()
+                open(get_abs_path(chroma_config["md5_hex_store"]),'w',encoding='utf-8').close()
                 return False
 
             with open(get_abs_path(chroma_config["md5_hex_store"]),"r",encoding="utf-8") as f:
@@ -76,7 +76,7 @@ class VextorStoreService:
                 if not documents:
                     logger.warning(f'[加载知识库]{path}内没有有效文本内容,跳过')
                     continue
-                split_document:list[Document] =  self.spliter.documents(documents)
+                split_document:list[Document] =  self.spliter.split_documents(documents)
                 if not split_document:
                     logger.warning(f'[加载知识库]{path}分片后没有有效文本内容,跳过')
                     continue
@@ -99,3 +99,5 @@ if __name__ == '__main__':
     retriver = vs.get_retriever()
     res = retriver.invoke('迷路')
     print(res)
+    for doc in res:
+        print(doc)

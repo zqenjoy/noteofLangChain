@@ -41,4 +41,4 @@ def  pdf_loader(filepath:str,password=None)->list[Document]:
     return PyPDFLoader(filepath,password).load()
 
 def  txt_loader(filepath:str)->list[Document]:
-    return TextLoader(filepath,encodings="utf-8").load()
+    return TextLoader(filepath,encoding="utf-8").load()
