@@ -98,6 +98,6 @@ if __name__ == '__main__':
     vs.load_document()
     retriver = vs.get_retriever()
     res = retriver.invoke('迷路')
-    print(res)
+    # print(res)
     for doc in res:
         print(doc)
