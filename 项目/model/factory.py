@@ -25,5 +25,6 @@ class EmbeddingModelFactory(BaseModelFactory):
 
 chat_model  = ChatModelFactory().generator()
 embed_model = EmbeddingModelFactory().generator()
+
 if __name__ == '__main__':
     print(rag_config["chat_model_name"])

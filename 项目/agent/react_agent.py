@@ -2,7 +2,7 @@
 from langchain.agents import create_agent
 from model.factory import chat_model
 from utils.prompt_loader import  load_system_prompts
-from agent.tools.agent_tools import  rag_summarize, get_weather,get_user_id,get_current_month,get_user_location,generate_external_data,fill_context_for_report
+from agent.tools.agent_tools import  rag_summarize, get_weather,get_user_id,get_current_month,get_user_location,generate_external_data,fetch_external_data,fill_context_for_report
 from agent.tools.middleware import monitor_tool, log_before_model, report_prompt_switch
 
 class ReactAgent:
@@ -10,7 +10,7 @@ class ReactAgent:
         self.agent = create_agent(
             model=chat_model,
             system_prompt=load_system_prompts(),
-            tools=[rag_summarize,get_weather,get_user_id,get_current_month,get_user_location,generate_external_data,fill_context_for_report],
+            tools=[rag_summarize,get_weather,get_user_id,get_current_month,get_user_location,generate_external_data,fill_context_for_report,fetch_external_data],
             middleware=[monitor_tool, log_before_model, report_prompt_switch]
         )
 
@@ -29,6 +29,7 @@ class ReactAgent:
 
 if __name__ == '__main__':
     agent=ReactAgent()
-    for chunk in agent.execute_stream("扫地机器人在我所在的地区的气温下如何保养？"):
+    # for chunk in agent.execute_stream("扫地机器人在我所在的地区的气温下如何保养？"):
+    #     print(chunk,end='',flush=True)
+    for chunk in agent.execute_stream("给我生成我的使用报告"):
         print(chunk,end='',flush=True)
-

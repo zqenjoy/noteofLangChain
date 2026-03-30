@@ -38,6 +38,7 @@ def get_current_month()->str:
 
 
 def generate_external_data()->str:
+    """生成外部数据"""
     if not external_data:
         external_data_path =get_abs_path(agent_config['external_data_path'])
 

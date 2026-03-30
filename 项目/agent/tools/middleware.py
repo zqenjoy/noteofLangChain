@@ -40,7 +40,7 @@ def log_before_model(
 ):
     logger.info(f"[log_before_model]即将调用模型，带有{len(state['messages'])}条消息。")
 
-    logger.debug(f"[log_before_model]消息内容：{type(state['messages'][-1].__name__)}|{state['messages'][-1].content.strip()}")
+    logger.debug(f"[log_before_model]消息内容：{type(state['messages'][-1]).__name__}|{state['messages'][-1].content.strip()}")
     return None
 
 

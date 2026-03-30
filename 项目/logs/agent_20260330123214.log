@@ -1,0 +1,17 @@
+2026-03-30 12:32:15,416 - agent - INFO - middleware.py:41 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-30 12:32:15,416 - agent - DEBUG - middleware.py:43 - [log_before_model]消息内容：HumanMessage|扫地机器人在我所在的地区的气温下如何保养？
+2026-03-30 12:32:22,425 - agent - INFO - middleware.py:18 - [monitor_tool]执行工具：get_user_location
+2026-03-30 12:32:22,425 - agent - INFO - middleware.py:19 - [monitor_tool]执行参数：{}
+2026-03-30 12:32:22,425 - agent - INFO - middleware.py:23 - [monitor_tool]工具：get_user_location调用成攻
+2026-03-30 12:32:22,426 - agent - INFO - middleware.py:41 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-30 12:32:22,426 - agent - DEBUG - middleware.py:43 - [log_before_model]消息内容：ToolMessage|深圳
+2026-03-30 12:32:26,763 - agent - INFO - middleware.py:18 - [monitor_tool]执行工具：get_weather
+2026-03-30 12:32:26,763 - agent - INFO - middleware.py:19 - [monitor_tool]执行参数：{'city': '深圳'}
+2026-03-30 12:32:26,763 - agent - INFO - middleware.py:23 - [monitor_tool]工具：get_weather调用成攻
+2026-03-30 12:32:26,764 - agent - INFO - middleware.py:41 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-30 12:32:26,764 - agent - DEBUG - middleware.py:43 - [log_before_model]消息内容：ToolMessage|深圳天气为晴天，气温26摄氏度，空气湿度50%，南风一级，AQI21，最近六小时降雨概率极低
+2026-03-30 12:32:31,803 - agent - INFO - middleware.py:18 - [monitor_tool]执行工具：rag_summarize
+2026-03-30 12:32:31,803 - agent - INFO - middleware.py:19 - [monitor_tool]执行参数：{'query': '扫地机器人在温暖潮湿气候下的保养方法'}
+2026-03-30 12:32:36,261 - agent - INFO - middleware.py:23 - [monitor_tool]工具：rag_summarize调用成攻
+2026-03-30 12:32:36,261 - agent - INFO - middleware.py:41 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-30 12:32:36,261 - agent - DEBUG - middleware.py:43 - [log_before_model]消息内容：ToolMessage|在温暖潮湿气候下，扫地机器人应定期清理尘盒和滤网，保持内部干燥，避免电机和电路受潮；使用后及时充电并存放于通风处，防止霉菌滋生；必要时可取出电池单独存放，以延长使用寿命。

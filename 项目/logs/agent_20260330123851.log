@@ -1,0 +1,42 @@
+2026-03-30 12:38:51,480 - agent - INFO - middleware.py:41 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-30 12:38:51,481 - agent - DEBUG - middleware.py:43 - [log_before_model]消息内容：HumanMessage|给我生成我的使用报告
+2026-03-30 12:39:00,802 - agent - INFO - middleware.py:18 - [monitor_tool]执行工具：get_user_id
+2026-03-30 12:39:00,802 - agent - INFO - middleware.py:19 - [monitor_tool]执行参数：{}
+2026-03-30 12:39:00,802 - agent - INFO - middleware.py:23 - [monitor_tool]工具：get_user_id调用成攻
+2026-03-30 12:39:00,803 - agent - INFO - middleware.py:41 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-30 12:39:00,809 - agent - DEBUG - middleware.py:43 - [log_before_model]消息内容：ToolMessage|1007
+2026-03-30 12:39:08,151 - agent - INFO - middleware.py:18 - [monitor_tool]执行工具：get_current_month
+2026-03-30 12:39:08,151 - agent - INFO - middleware.py:19 - [monitor_tool]执行参数：{}
+2026-03-30 12:39:08,151 - agent - INFO - middleware.py:23 - [monitor_tool]工具：get_current_month调用成攻
+2026-03-30 12:39:08,152 - agent - INFO - middleware.py:41 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-30 12:39:08,152 - agent - DEBUG - middleware.py:43 - [log_before_model]消息内容：ToolMessage|2025-01
+2026-03-30 12:39:11,007 - agent - INFO - middleware.py:18 - [monitor_tool]执行工具：fill_context_for_report
+2026-03-30 12:39:11,008 - agent - INFO - middleware.py:19 - [monitor_tool]执行参数：{}
+2026-03-30 12:39:11,008 - agent - INFO - middleware.py:23 - [monitor_tool]工具：fill_context_for_report调用成攻
+2026-03-30 12:39:11,009 - agent - INFO - middleware.py:41 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-30 12:39:11,009 - agent - DEBUG - middleware.py:43 - [log_before_model]消息内容：ToolMessage|null
+2026-03-30 12:39:19,382 - agent - INFO - middleware.py:18 - [monitor_tool]执行工具：fetch_external_data
+2026-03-30 12:39:19,382 - agent - INFO - middleware.py:19 - [monitor_tool]执行参数：{'user_id': '1007', 'month': '2025-01'}
+2026-03-30 12:39:19,382 - agent - INFO - middleware.py:23 - [monitor_tool]工具：fetch_external_data调用成攻
+2026-03-30 12:39:19,383 - agent - INFO - middleware.py:41 - [log_before_model]即将调用模型，带有9条消息。
+2026-03-30 12:39:19,383 - agent - DEBUG - middleware.py:43 - [log_before_model]消息内容：ToolMessage|Error: fetch_external_data is not a valid tool, try one of [rag_summarize, get_weather, get_user_id, get_current_month, get_user_location, generate_external_data, fill_context_for_report].
+2026-03-30 12:39:21,552 - agent - INFO - middleware.py:18 - [monitor_tool]执行工具：generate_external_data
+2026-03-30 12:39:21,552 - agent - INFO - middleware.py:19 - [monitor_tool]执行参数：{}
+2026-03-30 12:39:21,554 - agent - INFO - middleware.py:23 - [monitor_tool]工具：generate_external_data调用成攻
+2026-03-30 12:39:21,554 - agent - INFO - middleware.py:41 - [log_before_model]即将调用模型，带有11条消息。
+2026-03-30 12:39:21,554 - agent - DEBUG - middleware.py:43 - [log_before_model]消息内容：ToolMessage|null
+2026-03-30 12:39:29,703 - agent - INFO - middleware.py:18 - [monitor_tool]执行工具：rag_summarize
+2026-03-30 12:39:29,703 - agent - INFO - middleware.py:19 - [monitor_tool]执行参数：{'query': '扫地机器人使用频率与清洁效果关系'}
+2026-03-30 12:39:33,440 - agent - INFO - middleware.py:23 - [monitor_tool]工具：rag_summarize调用成攻
+2026-03-30 12:39:33,441 - agent - INFO - middleware.py:41 - [log_before_model]即将调用模型，带有13条消息。
+2026-03-30 12:39:33,441 - agent - DEBUG - middleware.py:43 - [log_before_model]消息内容：ToolMessage|扫地机器人的使用频率越高，清洁效果越好；频繁使用可减少灰尘和碎屑堆积，保持地面持续清洁。
+2026-03-30 12:39:35,634 - agent - INFO - middleware.py:18 - [monitor_tool]执行工具：rag_summarize
+2026-03-30 12:39:35,634 - agent - INFO - middleware.py:19 - [monitor_tool]执行参数：{'query': '扫地机器人滤网和边刷更换周期'}
+2026-03-30 12:39:40,667 - agent - INFO - middleware.py:23 - [monitor_tool]工具：rag_summarize调用成攻
+2026-03-30 12:39:40,669 - agent - INFO - middleware.py:41 - [log_before_model]即将调用模型，带有15条消息。
+2026-03-30 12:39:40,669 - agent - DEBUG - middleware.py:43 - [log_before_model]消息内容：ToolMessage|滤网建议每2-3个月更换一次，边刷建议每6-12个月更换一次。
+2026-03-30 12:39:44,633 - agent - INFO - middleware.py:18 - [monitor_tool]执行工具：rag_summarize
+2026-03-30 12:39:44,633 - agent - INFO - middleware.py:19 - [monitor_tool]执行参数：{'query': '提高扫地机器人清洁效率的方法'}
+2026-03-30 12:39:47,824 - agent - INFO - middleware.py:23 - [monitor_tool]工具：rag_summarize调用成攻
+2026-03-30 12:39:47,824 - agent - INFO - middleware.py:41 - [log_before_model]即将调用模型，带有17条消息。
+2026-03-30 12:39:47,824 - agent - DEBUG - middleware.py:43 - [log_before_model]消息内容：ToolMessage|定期清理滚刷和滤网、确保传感器清洁、合理规划清扫路径、避免障碍物堆积、及时清空尘盒。
