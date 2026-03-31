@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+set -e
+
+echo "[pre-commit] Running readme-updater skill script..."
+python ".cursor/skills/readme-updater/scripts/update_readme.py"
+
+echo "[pre-commit] Staging updated README..."
+git add "项目/README.md"
